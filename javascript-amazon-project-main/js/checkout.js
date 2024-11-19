@@ -2,6 +2,15 @@ import { products } from '../data/products.js';
 import { cart,removeProducid} from '../data/cart.js';
 import {formatCurrency} from './utils/money.js';
 //import {updateCartQuantity} from './amazonJs.js';
+import {hello} from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js';
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+hello();
+const today = dayjs();
+const deliveydate = today.add(7,'days');
+console.log(deliveydate);
+console.log(deliveydate.format('dddd, MMMM D'));
+console.log(deliveydate)
+
 let orderSummary='';
 cart.forEach((item)=>{
   const productId=item.productId;
