@@ -50,3 +50,33 @@ export function removeProducid(productId) {
 
   saveToStorage(); // Save the updated cart to localStorage
 }
+/*
+
+export function UpdateDeli(productId,deliveryOptionId) {
+  let matchingItem;
+cart.forEach((item) => {
+  if (productId === item.productId)
+  {
+    matchingItem = item;
+  }
+});
+matchingItem.deliveryOptionId=deliveryOptionId;
+saveToStorage()
+  
+  
+}
+*/
+
+export function updateDeliveryOption(productId,deliveryOptionId) {
+  let matchingItem;
+cart.forEach((item) => {
+  if (productId === item.productId)
+  {
+    matchingItem = item;
+  }
+});
+matchingItem.deliveryOptionId=deliveryOptionId;
+saveToStorage();
+
+  
+}
